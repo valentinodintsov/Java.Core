@@ -92,11 +92,6 @@ public class Team implements Competitor{
     @Override
     public void showResult() {
 
-        teamInfo();
-
-        Course course = new Course(new String[]{});
-        course.courseInfo();
-
         System.out.println("На старт! Внимание! Фарш!\n");
 
         for (int i = 0; i < this.users.length; ++i){
