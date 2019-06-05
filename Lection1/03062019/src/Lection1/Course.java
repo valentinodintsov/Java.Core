@@ -1,6 +1,6 @@
 package Lection1;
 
-public class Course {
+public class Course implements Barrier{
     String[] barriers;
 
     public Course(String[] barriers) {
@@ -14,6 +14,7 @@ public class Course {
 
     }
 
+    @Override
     public void courseInfo(){
         System.out.println("Полоса препятсвий на сегодня:\n");
 
@@ -24,6 +25,7 @@ public class Course {
         System.out.println("\n");
     }
 
+    @Override
     public void doIt(Team team){
         team.teamInfo();
     }
