@@ -24,4 +24,8 @@ public class Course {
         System.out.println("\n");
     }
 
+    public void doIt(Team team){
+        team.teamInfo();
+    }
+
 }
