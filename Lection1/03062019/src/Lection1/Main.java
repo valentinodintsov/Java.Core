@@ -6,7 +6,7 @@ public class Main {
         Team team = new Team("", new String[]{});
         Course c = new Course(new String[]{});
 
-        //c.doIt(team);
+        c.doIt(team);
         team.showResult();
     }
 }
