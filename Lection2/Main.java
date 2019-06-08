@@ -1,20 +1,34 @@
+package ArrayException;
+
+import ArrayException.Arrays;
+
 public class Main {
 
-    public static void main(final String[] args) {
-//        System.out.println(getWorkingHours(DayOfWeek.FRIDAY));
+    public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
 
-        int num = getWorkingHours(DayOfWeek.MONDAY);
-
-        switch (num){
-            case 0: System.out.println("Рабочая неделя еще не началась.");break;
-            default: System.out.println(String.format("До конца рабочей недели осталось отработать %d часов.", num)); break;
+        // Массив 4х4
+        try {
+            Arrays arr1 = new Arrays(new String[][]{{"1","5","9","13"},{"2","6","10","14"},{"3","7","11","15"},{"4","8","12","16"}});
         }
-    }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
-    public static int getWorkingHours(DayOfWeek dayOfWeek) {
-        int sum = 0;
-        for(int i = dayOfWeek.ordinal(); i < dayOfWeek.values().length; ++i )
-            sum += dayOfWeek.values()[i].getHours();
-        return sum;
+        // Массив 3х4
+        try {
+            Arrays arr2 = new Arrays(new String[][]{{"1","5","9","13"},{"2","6","10","14"},{"3","7","11","15"}});
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        // Массив с символами вместо цифр
+        try {
+            Arrays arr3 = new Arrays(new String[][]{{"1","5","9","13"},{"2","Упс!","10","14"},{"3","7","11","15"},{"4","8","12","16"}});
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
