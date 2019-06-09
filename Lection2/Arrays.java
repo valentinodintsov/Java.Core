@@ -35,3 +35,4 @@ public class Arrays {
         System.out.println("Сумма всех чисел равна " + this.sum);
     }
 }
+
