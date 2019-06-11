@@ -2,13 +2,13 @@ import java.util.*;
 
 public class Contacts {
 
+    private HashMap<String, ArrayList<String>> chm = new HashMap<>();
+    private ArrayList<String> number_list;
+
     public Contacts() {
         this.add("Иванов", "8(800)200-40-40");
         this.add("Петров", "8(800)200-84-42");
     }
-
-    private HashMap<String, ArrayList<String>> chm = new HashMap<>();
-    private ArrayList<String> number_list;
 
     public void add(String name, String number) {
         if (chm.containsKey(name)) {
