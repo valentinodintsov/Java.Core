@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Contacts {
 
-    private HashMap<String, ArrayList<String>> chm = new HashMap<>();
-    private ArrayList<String> number_list;
+    private HashMap<String, HashSet<String>> chm = new HashMap<>();
+    private HashSet<String> number_list;
 
     public Contacts() {
         this.add("Иванов", "8(800)200-40-40");
@@ -17,13 +17,13 @@ public class Contacts {
             chm.put(name, number_list);
         }
         else {
-            number_list = new ArrayList<>();
+            number_list = new HashSet<>();
             number_list.add(number);
             chm.put(name, number_list);
         }
     }
 
-    public ArrayList<String> get(String name) {
+    public HashSet<String> get(String name) {
         return chm.get(name);
     }
 
